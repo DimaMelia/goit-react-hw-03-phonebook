@@ -31,6 +31,10 @@ class App extends Component {
   }
 
   onFormSubmit = addedContact => {
+    if (addedContact.name.trim() && addedContact.number.trim()) {
+      alert(`Enter contact name and nuber`);
+      return;
+    }
     if (
       this.state.contacts.find(contact => contact.name === addedContact.name)
     ) {
