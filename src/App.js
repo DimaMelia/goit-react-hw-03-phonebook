@@ -31,8 +31,8 @@ class App extends Component {
   }
 
   onFormSubmit = addedContact => {
-    if (addedContact.name.trim() && addedContact.number.trim()) {
-      alert(`Enter contact name and nuber`);
+    if (addedContact.name.trim() === '' && addedContact.number.trim() === '') {
+      alert(`Enter contact name and number`);
       return;
     }
     if (
